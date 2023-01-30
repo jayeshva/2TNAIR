@@ -21,7 +21,7 @@
             200%{content:"Be One Of Us";}
         }
     </style>
-<body onload="slider()" onload="change()">
+<body onload="slider()">
      <div class="banner">
         <div class="slider">
             <img src="img/1.jpg" id="slideImg"> 
@@ -68,37 +68,20 @@
             "img/11.jpg",
             "img/12.jpg"
         );
-        var textinfo=new Array(
-            "HI",
-            "BYE",
-            "HELLO"
-        );
-        var len1=textinfo.length;
+        
         var len =images.length;
-        var j=0;
+        
         var i =0;
         function slider(){
             if(i > len-1){
                 i=0;
             }
-            if(j>len1-1){
-                j=0;
-            }
-            text=textinfo[j];
             slideImg.src=images[i];
             i++;
             setTimeout('slider()',3000);
         }
 
      </script>
-     <script type="text/javascript">
-        (function change() {
-          var words = ["Ui / UX Design","Photographer","Developer","Youtube","Happy Person" ],
-          i = 0;
-          setInterval(function(){ $('#words').fadeOut(function(){
-              $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
-            }); }, 3000)
-        })();
-      </script>
+    
 </body>
 </html>
