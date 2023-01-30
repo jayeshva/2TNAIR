@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>BIT NCC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        span::after{
+            content:"2TN AIR SQUADRON" ;
+            content:"Kovai Group" ;
+            content:"TN,AP & AN DTD" ;
+            content:"Be One Of Us" ;
+            animation: animate 10s infinite;
+        }
+        @keyframes animate{
+            0%{content:"2TN AIR SQUADRON";}
+            80%{content:"Kovai Group";}
+            145%{content:"TN,AP & AN DTD";}
+            200%{content:"Be One Of Us";}
+        }
+    </style>
+<body onload="slider()" onload="change()">
+     <div class="banner">
+        <div class="slider">
+            <img src="img/1.jpg" id="slideImg"> 
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="img/NCC.PNG" height="82px" width="40px" >
+                <h3 style="color: aliceblue;padding-left: 11px;" id="text">NCC</h1>
+                </div>
+                <div class="logo2">
+                    <img src="img/BIT.PNG" height="88px" width="92px" >
+                <h3 style="color: aliceblue;padding-left: 13px;" id="text">BIT NCC</h1>
+                </div>
+                
+                <div class="menu-icons"></div>
+                
+            </div>
+        <div class="content">
+            <h1>Once A Cadet Is Always A Cadet</h1>
+            <h3>2TN AIR SQUADRON NCC</h3>
+            <div>
+                <button type="button">Explore AirWing</button>
+            </div>
+                <h1><span></span></h1>
+        </div>
+            <!-- <div class="lay2">
+                <img src="img/BIT.PNG" height="90px" width="90px" >
+            <h3 style="color: aliceblue;padding-left: 13px;">BIT NCC</h1>
+            </div> -->
+            
+            
+
+        </div>
+     </div>
+     <script> 
+        var slideImg = document.getElementById("slideImg");
+        var images = new Array(  
+            "img/1.jpg",
+            "img/19.jpg",
+            "img/8.jpg",
+            "img/25.jpg",
+            "img/14.jpg",
+            "img/11.jpg",
+            "img/12.jpg"
+        );
+        var textinfo=new Array(
+            "HI",
+            "BYE",
+            "HELLO"
+        );
+        var len1=textinfo.length;
+        var len =images.length;
+        var j=0;
+        var i =0;
+        function slider(){
+            if(i > len-1){
+                i=0;
+            }
+            if(j>len1-1){
+                j=0;
+            }
+            text=textinfo[j];
+            slideImg.src=images[i];
+            i++;
+            setTimeout('slider()',3000);
+        }
+
+     </script>
+     <script type="text/javascript">
+        (function change() {
+          var words = ["Ui / UX Design","Photographer","Developer","Youtube","Happy Person" ],
+          i = 0;
+          setInterval(function(){ $('#words').fadeOut(function(){
+              $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+            }); }, 3000)
+        })();
+      </script>
+</body>
+</html>
