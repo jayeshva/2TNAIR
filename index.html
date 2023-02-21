@@ -2,61 +2,84 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="main.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BIT NCC</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
-    <style>
-        span::after{
-            content:"2TN AIR SQUADRON" ;
-            content:"Kovai Group" ;
-            content:"TN,AP & AN DTD" ;
-            content:"Be One Of Us" ;
-            animation: animate 10s infinite;
-        }
-        @keyframes animate{
-            0%{content:"2TN AIR SQUADRON";}
-            80%{content:"Kovai Group";}
-            145%{content:"TN,AP & AN DTD";}
-            200%{content:"Be One Of Us";}
-        }
-    </style>
 <body onload="slider()">
      <div class="banner">
-        <div class="slider">
-            <img src="img/1.jpg" id="slideImg"> 
-        </div>
-        <div class="overlay">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="img/NCC.PNG" height="82px" width="40px" >
-                <h3 style="color: aliceblue;padding-left: 11px;" id="text">NCC</h1>
-                </div>
-                <div class="logo2">
-                    <img src="img/BIT.PNG" height="88px" width="92px" >
-                <h3 style="color: aliceblue;padding-left: 13px;" id="text">BIT NCC</h1>
-                </div>
-                
-                <div class="menu-icons"></div>
-                
+        
+            <div class="slider">
+                <img src="img/1.jpg" id="slideImg"> 
             </div>
-        <div class="content">
-            <h1>Once A Cadet Is Always A Cadet</h1>
-            <h3>2TN AIR SQUADRON NCC</h3>
-            <div>
-                <button type="button">Explore AirWing</button>
-            </div>
-                <h1><span></span></h1>
-        </div>
-            <!-- <div class="lay2">
-                <img src="img/BIT.PNG" height="90px" width="90px" >
-            <h3 style="color: aliceblue;padding-left: 13px;">BIT NCC</h1>
-            </div> -->
-            
-            
+            <div class="overlay">
+                <div class="navbar">
+                    <div class="ncclogo" id="nccl">
+                        <img src="img/NCC.PNG" height="82px" width="65px" >
 
-        </div>
+                    </div>
+                    <label class="hamburger" id="mobile-menu-btn" onclick="myFunction()">&#9776;</label>
+                    <div class="mobile-menu" id="mobileview">
+                        <p>Home</p>
+                        <p>About</p>
+                        <p>Batches</p>
+                        <p>Achievments</p>
+                        <p>Blog</p>
+                        <p>Contact</p>
+                    </div>
+                    <div id="imgbit">
+                        <img src="img/BIT.PNG" height="88px" width="95px">
+                    </div>
+                    <div class="list" id="listl" >
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Batches</a>
+                            <li><a href="#">Achievments</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+    
+                        </ul>
+
+                    </div>
+                   
+                </div>
+             
+                <div class="content">
+                    <h1>Once A Cadet Is Always A Cadet</h1>
+                    <h3>2TN AIR SQUADRON NCC</h3>
+                    <div>
+                        <button type="button">Explore AirWing</button>
+                    </div>
+
+                </div>
+               
+            </div>
+           
+                
+        
      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      <script> 
         var slideImg = document.getElementById("slideImg");
         var images = new Array(  
@@ -78,7 +101,7 @@
             }
             slideImg.src=images[i];
             i++;
-            setTimeout('slider()',3000);
+            setTimeout('slider()',3100);
         }
 
      </script>
